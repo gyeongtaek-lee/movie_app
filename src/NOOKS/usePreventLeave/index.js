@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import usePreventLeave from './usePreventLeave';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <usePreventLeave />
   </React.StrictMode>,
   document.getElementById('root')
 );

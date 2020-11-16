@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import useConfirm from './useConfirm';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <useConfirm />
   </React.StrictMode>,
   document.getElementById('root')
 );

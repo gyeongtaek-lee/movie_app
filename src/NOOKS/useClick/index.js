@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import useClick from './useClick';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <useClick />
   </React.StrictMode>,
   document.getElementById('root')
 );

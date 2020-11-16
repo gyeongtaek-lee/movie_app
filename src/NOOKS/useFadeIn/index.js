@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import useFadeIn from './useFadeIn';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <useFadeIn />
   </React.StrictMode>,
   document.getElementById('root')
 );

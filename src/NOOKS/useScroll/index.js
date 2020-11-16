@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import useScroll from './useScroll';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <useScroll />
   </React.StrictMode>,
   document.getElementById('root')
 );

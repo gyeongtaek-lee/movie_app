@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+
+    const source = new EventSource('http://localhost:8080/kafka-messages', {withCredentials: false});
+    console.log(source.withCredentials);
+    source.onmessage = (e) => {
+        document.body.innerHTML += e.data + '<br>';
+    }
+
+    source.onerror = error => {
+        console.log(error);
+        source.close();
+    };
+
+</script>
+</html>

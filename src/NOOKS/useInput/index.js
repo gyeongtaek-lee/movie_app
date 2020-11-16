@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import useInput from './useInput';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <useInput />
   </React.StrictMode>,
   document.getElementById('root')
 );

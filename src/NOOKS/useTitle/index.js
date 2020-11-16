@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import useTitle from './useTitle';
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <useTitle />
   </React.StrictMode>,
   document.getElementById('root')
 );
