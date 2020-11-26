@@ -59,6 +59,9 @@
     const d = new Date();
 
     const source = new EventSource('http://10.149.181.149:8080/kafka-messages', {withCredentials: false});
+
+    // const reSource = new ReconnectingEventSource('http://10.149.181.149:8080/kafka-messages', {withCredentials: false});
+
     // console.log(source.withCredentials);
     source.onmessage = (e) => {
         // document.body.innerHTML += e.data + '<br>';
@@ -77,7 +80,14 @@
 
     source.onerror = error => {
         console.log(error);
-        source.close();
+
+        if (this.readyState == EventSource.CONNECTING) {
+            console.log(`Reconnecting (readyState=${this.readyState})...`)
+        }
+        else {
+            console.log("Error has occured.");
+        }
+
     };
 
     const press = (t) => {
